@@ -10,6 +10,13 @@ export class SignUpController {
     if (!httpRequest.body.email) {
       return badRequest(new MissingParamError('email'))
     }
+
+    const requeriFields = ['name', 'email']
+    for (const field of requeriFields) {
+      if (!httpRequest.body[field]) {
+        return badRequest(new MissingParamError(field))
+      }
+    }
     return {
       statusCode: 0,
       body: null
