@@ -36,5 +36,10 @@
       "eslint 'src/**' --fix",
       "npm run test:staged"
     ]
+  },
+  "pre-push": {
+    "*.ts": [
+      "npm run test:ci"
+    ]
   }
 }
