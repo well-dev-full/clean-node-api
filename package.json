@@ -38,6 +38,9 @@
       "npm run test:staged"
     ]
   },
+  "test:ci": [
+    "npm test -- --coverage"
+  ],
   "dependencies": {
     "validator": "^13.6.0"
   }
