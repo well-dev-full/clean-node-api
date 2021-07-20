@@ -38,9 +38,11 @@
       "npm run test:staged"
     ]
   },
-  "test:ci": [
-    "npm test -- --coverage"
-  ],
+  "test:ci":  {
+    "*.ts": [
+      "npm run test:ci"
+    ]
+  },
   "dependencies": {
     "validator": "^13.6.0"
   }
